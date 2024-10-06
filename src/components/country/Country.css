@@ -1,0 +1,12 @@
+.country-container{
+    border: 2px solid tomato;
+    border-radius: 20px;
+    padding: 20px;
+   
+}
+
+.img-container img{
+    max-width: 250px;
+    max-height: 180px;
+
+}
