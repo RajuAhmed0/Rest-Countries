@@ -7,16 +7,19 @@ const Country = ({ country, setCountryName, countryName, setAddImg, addImg }) =>
 
     const [visit, setVisit] = useState(false)
     const [add, setAdd] = useState(false)
+
     const [addFlags, setAddFlags] = useState(false)
+
+
 
     const addCountryBtn = () => {
         setCountryName([...countryName, name.common])
         setAdd(true)
     }
-    const addImgBtn = ()=>{
-        setAddImg([...addImg, flags.png])
-        setAddFlags(true)
-    }
+    const addImgBtn = () => {
+        setAddImg([...addImg, flags.png]);
+        setAddFlags(true); 
+    };
 
 
     return (
@@ -33,10 +36,11 @@ const Country = ({ country, setCountryName, countryName, setAddImg, addImg }) =>
                 <button onClick={() => addCountryBtn()}>Add Name</button> :
                 <button disabled>Add Name</button>
             }
-           { !addFlags ?
-             <button onClick={() => addImgBtn()} style={{ marginLeft: '10px' }}>Add Flag</button> :
-             <button disabled>Add Flag</button>
-           }
+             {!addFlags ?
+                <button onClick={() => addImgBtn()} style={{ marginLeft: '10px' }}>Add Flag</button> :
+                <button disabled>Add Flag</button>
+            }
+
         </div>
     );
 };

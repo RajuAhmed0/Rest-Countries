@@ -5,6 +5,8 @@ const Countries = () => {
     const [countries, setCountries] = useState([])
     const [countryName, setCountryName] = useState([])
     const [addImg, setAddImg] = useState([])
+    console.log(addImg);
+    
 
     useEffect(() => {
         fetch('https://restcountries.com/v3.1/all')
@@ -20,6 +22,11 @@ const Countries = () => {
             <div style={{ marginBottom: '15px' }}>
                 {
                     countryName.map(CountryN => <span style={{ marginRight: '15px', fontSize: '25px', fontWeight: '600' }}>{CountryN},</span>)
+                }
+            </div>
+            <div>
+                {
+                    addImg.map(flag => <img style={{marginRight: "10px", height:"70px", width:'80px'}} src={flag}/>)
                 }
             </div>
         
